@@ -1,5 +1,9 @@
 function Landing() {
-  return <div>صفحه اصلی</div>;
+  return (
+    <>
+      <header className="header">Hello</header>
+    </>
+  );
 }
 
 export default Landing;

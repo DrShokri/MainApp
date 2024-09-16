@@ -87,10 +87,11 @@ Link 👇
   box-sizing: border-box;
 }
 body {
-  font-family: "nasim", Arial, Helvetica, sans-serif;
+  font-family: "rokhNormal", "nasim", Arial, Helvetica, sans-serif;
   line-height: 1;
   font-weight: 400;
-  /* color: #555; */
+  color: #343a40;
+  background-color: #f8f9fa;
 
   /* Only works if there is nothing absolutely positioned in relation to body */
   overflow-x: hidden;
@@ -110,6 +111,23 @@ body {
   src: url("../public/fonts/nasim.ttf");
 }
 
+@font-face {
+  font-family: "rokhBold";
+  src: url("../public/fonts/Rokh_Pro/Farsi Numeral/ttf/RokhFaNum-Bold.ttf");
+}
+@font-face {
+  font-family: "rokhNormal";
+  src: url("../public/fonts/Rokh_Pro/Farsi Numeral/ttf/RokhFaNum-Normal.ttf");
+}
+@font-face {
+  font-family: "rokhMedum";
+  src: url("../public/fonts/Rokh_Pro/Farsi Numeral/ttf/RokhFaNum-Medium.ttf");
+}
+@font-face {
+  font-family: "rokhSemiBold";
+  src: url("../public/fonts/Rokh_Pro/Farsi Numeral/ttf/RokhFaNum-SemiBold.ttf");
+}
+
 html {
   /* font-size: 10px; */
 
@@ -124,12 +142,19 @@ html {
 /**************************/
 
 .textSmall {
-  font-weight: 100;
+  /* font-weight: 100; */
   font-size: 2.4rem;
-  font-family: "nasim";
 }
 .textBold {
-  font-weight: 900;
+  /* font-weight: 900; */
   font-size: 3.6rem;
-  font-family: "nasim";
+}
+.textHover {
+  padding-top: 2.4rem;
+  font-size: 1.8rem;
+  font-family: "rokhSemiBold";
+}
+.textHover:hover {
+  color: #4dabf7;
+  transition-duration: 0.2s;
 }

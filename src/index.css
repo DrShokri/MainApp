@@ -87,13 +87,27 @@ Link 👇
   box-sizing: border-box;
 }
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: "nasim", Arial, Helvetica, sans-serif;
   line-height: 1;
   font-weight: 400;
   /* color: #555; */
 
   /* Only works if there is nothing absolutely positioned in relation to body */
   overflow-x: hidden;
+  direction: rtl;
+}
+
+@font-face {
+  font-family: yekan;
+  src: url("../public/fonts/Yekan.ttf");
+}
+@font-face {
+  font-family: IranSans;
+  src: url("../public/fonts/IranSans.ttf");
+}
+@font-face {
+  font-family: nasim;
+  src: url("../public/fonts/nasim.ttf");
 }
 
 html {
@@ -101,10 +115,21 @@ html {
 
   /* 10px / 16px = 0.625 = 62.5% */
   /* Percentage of user's browser font-size setting */
-  /* font-size: 62.5%; */
+  font-size: 62.5%;
   overflow-x: hidden;
 }
 
 /**************************/
 /* GENRAL REUSABLE COMPONENTS */
 /**************************/
+
+.textSmall {
+  font-weight: 100;
+  font-size: 2.4rem;
+  font-family: "nasim";
+}
+.textBold {
+  font-weight: 900;
+  font-size: 3.6rem;
+  font-family: "nasim";
+}

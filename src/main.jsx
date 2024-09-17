@@ -4,6 +4,9 @@ import App from "./App.jsx";
 import "./index.css";
 import { NextUIProvider } from "@nextui-org/react";
 
+// font
+import "./assets/css/fonts.css";
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <NextUIProvider>

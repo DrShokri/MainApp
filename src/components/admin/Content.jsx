@@ -76,17 +76,17 @@ function Content() {
         );
       case "actions":
         return (
-          <div className="relative flex justify-end items-center gap-2">
-            <Dropdown className="bg-background border-1 border-default-200">
+          <div className="relative flex justify-end items-center gap-2 ">
+            <Dropdown className="bg-background border-1 border-default-200 dark text-white">
               <DropdownTrigger>
                 <Button isIconOnly radius="full" size="sm" variant="light">
                   <VerticalDotsIcon className="text-default-400" />
                 </Button>
               </DropdownTrigger>
-              <DropdownMenu>
-                <DropdownItem>View</DropdownItem>
-                <DropdownItem>Edit</DropdownItem>
-                <DropdownItem>Delete</DropdownItem>
+              <DropdownMenu className="font-[IRANSans]" dir="rtl">
+                <DropdownItem>اطلاعات بیشتر</DropdownItem>
+                <DropdownItem>ویرایش</DropdownItem>
+                <DropdownItem color="danger">حذف کردن</DropdownItem>
               </DropdownMenu>
             </Dropdown>
           </div>
@@ -107,6 +107,7 @@ function Content() {
           wrapper: "after:bg-foreground after:text-background text-background",
         },
       }}
+      style={{ fontFamily: "IRANSans", marginTop: "40px" }}
       classNames={classNames}
       selectedKeys={selectedKeys}
       selectionMode="multiple"
@@ -117,7 +118,7 @@ function Content() {
         {(column) => (
           <TableColumn
             key={column.uid}
-            align={column.uid === "actions" ? "center" : "start"}
+            align={column.uid === "actions" ? "end" : "start"}
             allowsSorting={column.sortable}
           >
             {column.name}

@@ -1,8 +1,14 @@
-import { Button, Input } from "@nextui-org/react";
+// next ui
+import { Button, Input, useDisclosure } from "@nextui-org/react";
+
+// icons
 import { PlusIcon } from "./icons/PlusIcon";
 import { SearchIcon } from "./icons/SearchIcon";
+import AddModal from "./AddModal";
 
 function Header() {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
   return (
     <div className="flex flex-col gap-4">
       <div className="flex justify-between gap-3 items-end">
@@ -20,14 +26,16 @@ function Header() {
           //onClear={() => setFilterValue("")}
           //onValueChange={onSearchChange}
         />
-        <div className="flex gap-3">
+        <div className="flex gap-3 dark">
           <Button
-            className="bg-foreground text-background"
+            className="bg-foreground text-background font-[IRANSans]  "
             endContent={<PlusIcon />}
             size="sm"
+            onPress={onOpen}
           >
-            Add New
+            اضافه کردن
           </Button>
+          <AddModal isOpen={isOpen} onOpenChange={onOpenChange} />
         </div>
       </div>
       <div className="flex justify-between items-center">

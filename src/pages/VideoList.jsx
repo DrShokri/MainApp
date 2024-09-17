@@ -111,13 +111,16 @@ export default function VideoList() {
 
           <div className="mt-12">
             <FilterBoxTitle title="دسته بندی محصولات" />
-            {category.map((cat) => (
-              <ProductCategories
-                category={cat.category}
-                number={cat.number}
-                key={cat.category}
-              />
-            ))}
+
+            <ul>
+              {category.map((cat) => (
+                <ProductCategories
+                  category={cat.category}
+                  number={cat.number}
+                  key={cat.category}
+                />
+              ))}
+            </ul>
           </div>
         </div>
       </div>

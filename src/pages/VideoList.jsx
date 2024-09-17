@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import ProductCategories from "../componenet/videoComponent/ProductCategories";
-import FilterBoxTitle from "../componenet/videoComponent/FilterBoxTitle";
-import VideFilterText from "../componenet/videoComponent/VideFilterText";
-import VideFilterBox from "../componenet/videoComponent/VideFilterBox";
-import VideoListBox from "../componenet/videoComponent/VideoListBox";
-import VideoFilterPrice from "../componenet/videoComponent/VideoFilterPrice";
+import ProductCategories from "../components/videoComponent/ProductCategories";
+import FilterBoxTitle from "../components/videoComponent/FilterBoxTitle";
+import VideFilterText from "../components/videoComponent/VideFilterText";
+import VideFilterBox from "../components/videoComponent/VideFilterBox";
+import VideoListBox from "../components/videoComponent/VideoListBox";
+import VideoFilterPrice from "../components/videoComponent/VideoFilterPrice";
 
 export default function VideoList() {
   const [videoFilter, setVideoFilter] = useState([

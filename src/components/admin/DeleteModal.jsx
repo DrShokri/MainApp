@@ -1,8 +1,6 @@
 /* eslint-disable react/prop-types */
-
 import {
   Button,
-  Input,
   Modal,
   ModalBody,
   ModalContent,
@@ -10,7 +8,7 @@ import {
   ModalHeader,
 } from "@nextui-org/react";
 
-function AddModal({ isOpen, onOpenChange }) {
+function DeleteModal({ isOpen, onOpenChange }) {
   return (
     <Modal
       className="dark font-[IRANSans]"
@@ -42,20 +40,18 @@ function AddModal({ isOpen, onOpenChange }) {
       <ModalContent>
         {(onClose) => (
           <>
-            <ModalHeader className="flex flex-col gap-1 text-white">
-              اضافه کردن
+            <ModalHeader className="flex flex-col gap-1 text-red-500">
+              هشدار
             </ModalHeader>
             <ModalBody className="text-white">
-              <Input autoFocus label="نام ویدیو" variant="bordered" />
-              <Input autoFocus label="نام ویدیو" variant="bordered" />
-              <Input autoFocus label="نام ویدیو" variant="bordered" />
+              آیا از حذف این ايتم مطمعنید ؟
             </ModalBody>
             <ModalFooter>
               <Button color="danger" variant="flat" onPress={onClose}>
-                لغو
+                خیر
               </Button>
               <Button color="primary" onPress={onClose}>
-                تایید
+                بله
               </Button>
             </ModalFooter>
           </>
@@ -65,4 +61,4 @@ function AddModal({ isOpen, onOpenChange }) {
   );
 }
 
-export default AddModal;
+export default DeleteModal;

@@ -11,14 +11,30 @@ import {
   TableColumn,
   TableHeader,
   TableRow,
+  useDisclosure,
   User,
 } from "@nextui-org/react";
+
 import { useMemo, useState } from "react";
 import { columns, users } from "./data";
 import { VerticalDotsIcon } from "./icons/VerticalDotsIcon";
+import DeleteModal from "./DeleteModal";
+import AddModal from "./AddModal";
 
 function Content() {
   const [selectedKeys, setSelectedKeys] = useState(new Set([]));
+
+  // modals
+  const {
+    isOpen: isOpenDelete,
+    onOpen: onOpenDelete,
+    onOpenChange: onOpenChangeDelete,
+  } = useDisclosure();
+  const {
+    isOpen: isOpenAdd,
+    onOpen: onOpenAdd,
+    onOpenChange: onOpenChangeAdd,
+  } = useDisclosure();
 
   const classNames = useMemo(
     () => ({
@@ -38,6 +54,7 @@ function Content() {
     }),
     []
   );
+
   const renderCell = (user, columnKey) => {
     const cellValue = user[columnKey];
 
@@ -85,8 +102,10 @@ function Content() {
               </DropdownTrigger>
               <DropdownMenu className="font-[IRANSans]" dir="rtl">
                 <DropdownItem>اطلاعات بیشتر</DropdownItem>
-                <DropdownItem>ویرایش</DropdownItem>
-                <DropdownItem color="danger">حذف کردن</DropdownItem>
+                <DropdownItem onPress={onOpenAdd}>ویرایش</DropdownItem>
+                <DropdownItem onPress={onOpenDelete} color="danger">
+                  حذف کردن
+                </DropdownItem>
               </DropdownMenu>
             </Dropdown>
           </div>
@@ -97,45 +116,52 @@ function Content() {
   };
 
   return (
-    <Table
-      isCompact
-      removeWrapper
-      aria-label="Example table with custom cells, pagination and sorting"
-      bottomContentPlacement="outside"
-      checkboxesProps={{
-        classNames: {
-          wrapper: "after:bg-foreground after:text-background text-background",
-        },
-      }}
-      style={{ fontFamily: "IRANSans", marginTop: "40px" }}
-      classNames={classNames}
-      selectedKeys={selectedKeys}
-      selectionMode="multiple"
-      topContentPlacement="outside"
-      onSelectionChange={setSelectedKeys}
-    >
-      <TableHeader columns={columns}>
-        {(column) => (
-          <TableColumn
-            key={column.uid}
-            align={column.uid === "actions" ? "end" : "start"}
-            allowsSorting={column.sortable}
-          >
-            {column.name}
-          </TableColumn>
-        )}
-      </TableHeader>
+    <>
+      <Table
+        isCompact
+        removeWrapper
+        aria-label="Example table with custom cells, pagination and sorting"
+        bottomContentPlacement="outside"
+        checkboxesProps={{
+          classNames: {
+            wrapper:
+              "after:bg-foreground after:text-background text-background",
+          },
+        }}
+        style={{ fontFamily: "IRANSans", marginTop: "40px" }}
+        classNames={classNames}
+        selectedKeys={selectedKeys}
+        selectionMode="multiple"
+        topContentPlacement="outside"
+        onSelectionChange={setSelectedKeys}
+      >
+        <TableHeader columns={columns}>
+          {(column) => (
+            <TableColumn
+              key={column.uid}
+              align={column.uid === "actions" ? "end" : "start"}
+              allowsSorting={column.sortable}
+            >
+              {column.name}
+            </TableColumn>
+          )}
+        </TableHeader>
 
-      <TableBody emptyContent={"No users found"} items={users}>
-        {(item) => (
-          <TableRow key={item.id}>
-            {(columnKey) => (
-              <TableCell>{renderCell(item, columnKey)}</TableCell>
-            )}
-          </TableRow>
-        )}
-      </TableBody>
-    </Table>
+        <TableBody emptyContent={"No users found"} items={users}>
+          {(item) => (
+            <TableRow key={item.id}>
+              {(columnKey) => (
+                <TableCell>{renderCell(item, columnKey)}</TableCell>
+              )}
+            </TableRow>
+          )}
+        </TableBody>
+      </Table>
+
+      {/* modals: */}
+      <DeleteModal isOpen={isOpenDelete} onOpenChange={onOpenChangeDelete} />
+      <AddModal isOpen={isOpenAdd} onOpenChange={onOpenChangeAdd} />
+    </>
   );
 }
 

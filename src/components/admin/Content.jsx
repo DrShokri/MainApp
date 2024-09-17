@@ -1,10 +1,10 @@
 import {
   Button,
-  Chip,
   Dropdown,
   DropdownItem,
   DropdownMenu,
   DropdownTrigger,
+  Spinner,
   Table,
   TableBody,
   TableCell,
@@ -12,14 +12,15 @@ import {
   TableHeader,
   TableRow,
   useDisclosure,
-  User,
 } from "@nextui-org/react";
 
 import { useMemo, useState } from "react";
-import { columns, users } from "./data";
+import { columns } from "./data";
 import { VerticalDotsIcon } from "./icons/VerticalDotsIcon";
 import DeleteModal from "./DeleteModal";
 import AddModal from "./AddModal";
+import { useVideos } from "./hooks/useVideos";
+//import { useVideos } from "./hooks/useVideos";
 
 function Content() {
   const [selectedKeys, setSelectedKeys] = useState(new Set([]));
@@ -35,6 +36,9 @@ function Content() {
     onOpen: onOpenAdd,
     onOpenChange: onOpenChangeAdd,
   } = useDisclosure();
+
+  // query:
+  const { videos, isLoading } = useVideos();
 
   const classNames = useMemo(
     () => ({
@@ -59,38 +63,6 @@ function Content() {
     const cellValue = user[columnKey];
 
     switch (columnKey) {
-      case "name":
-        return (
-          <User
-            avatarProps={{ radius: "full", size: "sm", src: user.avatar }}
-            classNames={{
-              description: "text-default-500",
-            }}
-            description={user.email}
-            name={cellValue}
-          >
-            {user.email}
-          </User>
-        );
-      case "role":
-        return (
-          <div className="flex flex-col">
-            <p className="text-bold text-small capitalize">{cellValue}</p>
-            <p className="text-bold text-tiny capitalize text-default-500">
-              {user.team}
-            </p>
-          </div>
-        );
-      case "status":
-        return (
-          <Chip
-            className="capitalize border-none gap-1 text-default-600"
-            size="sm"
-            variant="dot"
-          >
-            {cellValue}
-          </Chip>
-        );
       case "actions":
         return (
           <div className="relative flex justify-end items-center gap-2 ">
@@ -114,6 +86,15 @@ function Content() {
         return cellValue;
     }
   };
+
+  if (isLoading)
+    return (
+      <Spinner
+        className="mt-10 font-[IRANSans]"
+        label="درحال بارگزاری ..."
+        color="default"
+      />
+    );
 
   return (
     <>
@@ -147,7 +128,7 @@ function Content() {
           )}
         </TableHeader>
 
-        <TableBody emptyContent={"No users found"} items={users}>
+        <TableBody emptyContent={"No users found"} items={videos}>
           {(item) => (
             <TableRow key={item.id}>
               {(columnKey) => (

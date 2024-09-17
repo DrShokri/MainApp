@@ -1,4 +1,5 @@
 import Content from "../components/admin/Content";
+import Footer from "../components/admin/Footer";
 import Header from "../components/admin/Header";
 
 function AdminPage() {
@@ -9,6 +10,7 @@ function AdminPage() {
     >
       <Header />
       <Content />
+      <Footer />
     </div>
   );
 }

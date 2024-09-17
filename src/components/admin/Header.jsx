@@ -15,10 +15,10 @@ function Header() {
         <Input
           isClearable
           classNames={{
-            base: "w-full sm:max-w-[44%]",
+            base: "w-full sm:max-w-[44%] font-[IRANSans]",
             inputWrapper: "border-1",
           }}
-          placeholder="Search by name..."
+          placeholder="سرچ کنید ....."
           size="sm"
           startContent={<SearchIcon className="text-default-300" />}
           //value={filterValue}

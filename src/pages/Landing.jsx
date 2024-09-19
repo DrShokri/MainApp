@@ -1,9 +1,7 @@
+import MainLayout from "../Layout/MainLayout";
+
 function Landing() {
-  return (
-    <>
-      <header className="header">Hello</header>
-    </>
-  );
+  return <MainLayout />;
 }
 
 export default Landing;

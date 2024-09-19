@@ -8,7 +8,7 @@ function MainLayout() {
     <>
       <Header />
 
-      <main className="h-[400px]"></main>
+      <main className="h-[4100px]"></main>
 
       <footer>
         <FooterSvg />

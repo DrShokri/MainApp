@@ -6,10 +6,11 @@ export function useVideos() {
     data: videos,
     isLoading,
     error,
+    isError,
   } = useQuery({
     queryKey: ["videos"],
     queryFn: getVideos,
   });
 
-  return { videos, isLoading, error };
+  return { videos, isLoading, error, isError };
 }

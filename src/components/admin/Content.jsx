@@ -38,7 +38,7 @@ function Content() {
   } = useDisclosure();
 
   // query:
-  const { videos, isLoading } = useVideos();
+  const { videos, isLoading, isError } = useVideos();
 
   const classNames = useMemo(
     () => ({
@@ -94,6 +94,11 @@ function Content() {
         label="درحال بارگزاری ..."
         color="default"
       />
+    );
+
+  if (isError)
+    return (
+      <h1 className="text-[20px] m-auto font-[IRANSans]">مشکلی پیش آمده</h1>
     );
 
   return (

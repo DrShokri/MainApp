@@ -22,8 +22,8 @@ export default function App() {
   };
 
   return (
-    <div className="h-fit w-fit m-auto mt-20 text-[26px]">
-      <h1 className="mb-7 w-fit m-auto">
+    <div className="h-fit w-fit m-auto text-[34px] px-9 max-sm:px-0">
+      <h1 className="mb-[80px] w-fit m-auto">
         <span className="border-b-4 border-blue-500">برخی</span> از{" "}
         <span className="font-['rokhSemiBold'] text-blue-500">قبولی</span> هامون
       </h1>

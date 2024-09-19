@@ -1,7 +1,7 @@
 function StudyVector() {
   return (
     <svg
-      className="w-[300px]"
+      className="~w-[400px]/[600px] max-sm:hidden"
       viewBox="0 0 540 477"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

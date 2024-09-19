@@ -1,9 +1,7 @@
+import Index from "../components/Landing/achievements";
+
 function Landing() {
-  return (
-    <>
-      <header className="header">Hello</header>
-    </>
-  );
+  return <Index />;
 }
 
 export default Landing;

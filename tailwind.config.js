@@ -3,6 +3,9 @@ import fluid, { extract } from "fluid-tailwind";
 
 /** @type {import('tailwindcss').Config} */
 export default {
+  content: [
+    "./node_modules/@nextui-org/theme/dist/components/(button|link|popover|ripple|spinner).js"
+],
   content: {
     files: [
       "./index.html",

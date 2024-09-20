@@ -4,7 +4,7 @@ import { HiOutlineMail } from "react-icons/hi";
 
 function TopFooter() {
   return (
-    <div className="bg-[#f0f0f0] flex max-sm:flex-col items-center justify-center gap-10 mb-20 font-['rokhNormal'] py-10 px-4">
+    <div className="bg-[#f0f0f0] flex max-sm:flex-col items-center justify-center gap-10 font-['rokhNormal'] py-10 px-4">
       <div className="flex flex-col bg-white w-4/5 sm:w-[400px] rounded-xl shadow-sm pr-4 pl-8 py-4">
         <div className="w-14 mb-2">
           <img

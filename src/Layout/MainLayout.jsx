@@ -13,7 +13,7 @@ function MainLayout() {
       <footer className="flex flex-col">
         <FooterSvg />
         <TopFooter />
-        {/* <BottomFooter /> */}
+        <BottomFooter />
       </footer>
     </>
   );

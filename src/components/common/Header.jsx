@@ -5,8 +5,8 @@ function Header() {
   return (
     <header
       className=" font-[IranSans] h-[150px] flex
-   items-center justify-between max-w-[1200px]
-   m-auto ~px-[12px]/[24px] min-w-[300px]"
+      items-center justify-between max-w-[1200px]
+      m-auto ~px-[12px]/[24px] min-w-[300px]"
     >
       <ul className="flex text-[#8A85A4] leading-[50px] ~min-[300px]:~text-[10px]/[19px] ~gap-[18px]/[28px]">
         <li className="cursor-pointer transition-all hover:text-[#212529] min-w-fit">

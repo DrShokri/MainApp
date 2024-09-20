@@ -8,12 +8,12 @@ function MainLayout() {
     <>
       <Header />
 
-      <main className="h-[400px]"></main>
+      {/* <main className="h-[400px]"></main> */}
 
-      <footer>
+      <footer className="flex flex-col">
         <FooterSvg />
         <TopFooter />
-        <BottomFooter />
+        {/* <BottomFooter /> */}
       </footer>
     </>
   );

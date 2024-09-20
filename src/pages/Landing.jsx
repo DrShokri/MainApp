@@ -1,7 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from "react";
+
+// motion
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { animationVariantsfromLeft } from "../core/utils/constants/animationvariants";
+import { animationVariantsfromRight } from "../core/utils/constants/animationvariants";
+import { animationVariantsfromBott } from "../core/utils/constants/animationvariants";
 
 // components
 import Achievements from "../components/Landing/achievements";
@@ -10,7 +15,7 @@ import VideoSection from "../components/landing/VideoSection";
 
 const Section = ({ children, animationVariant }) => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.2 });
+  const [ref, inView] = useInView({ threshold: 0.4 });
 
   React.useEffect(() => {
     if (inView) {
@@ -26,28 +31,23 @@ const Section = ({ children, animationVariant }) => {
       initial="hidden"
       animate={controls}
       variants={animationVariant}
-      transition={{ duration: 0.8, ease: "easeInOut" }}
+      transition={{ duration: 0.4, ease: "easeInOut" }}
     >
       {children}
     </motion.div>
   );
 };
 
-const animationVariants = {
-  hidden: { opacity: 0, y: 100 },
-  visible: { opacity: 1, y: 0 },
-};
-
 const Landing = () => {
   return (
     <div>
-      <Section animationVariant={animationVariants}>
+      <Section animationVariant={animationVariantsfromBott}>
         <HeroSection />
       </Section>
-      <Section animationVariant={animationVariants}>
+      <Section animationVariant={animationVariantsfromRight}>
         <VideoSection />
       </Section>
-      <Section animationVariant={animationVariants}>
+      <Section animationVariant={animationVariantsfromLeft}>
         <Achievements />
       </Section>
     </div>

@@ -10,6 +10,8 @@ import Header from "../components/common/Header";
 // motion:
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { animationVariantsfromLeft } from "../core/utils/constants/animationvariants";
+import { animationVariantsfromBott } from "../core/utils/constants/animationvariants";
 
 function MainLayout() {
   const Section = ({ children, animationVariant }) => {
@@ -37,14 +39,9 @@ function MainLayout() {
     );
   };
 
-  const animationVariants = {
-    hidden: { opacity: 0, y: 100 },
-    visible: { opacity: 1, y: 0 },
-  };
-
   return (
     <>
-      <Section animationVariant={animationVariants}>
+      <Section animationVariant={animationVariantsfromLeft}>
         <Header />
       </Section>
 
@@ -53,7 +50,7 @@ function MainLayout() {
       </main>
 
       <footer className="flex flex-col">
-        <Section animationVariant={animationVariants}>
+        <Section animationVariant={animationVariantsfromBott}>
           <FooterSvg />
           <TopFooter />
         </Section>

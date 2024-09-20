@@ -1,6 +1,6 @@
 export default function HeroSection() {
   return (
-    <section className="text-black flex flex-col sm:flex-row-reverse ~m-[10px]/[80px] gap-6">
+    <section className="text-black flex flex-col sm:flex-row-reverse mt-[200px] ~mx-[10px]/[80px] gap-6">
       <div className="container sm:w-1/2 flex justify-center md:justify-end">
         <img
           src="picture/heroSection/ImgAmir.JPG"

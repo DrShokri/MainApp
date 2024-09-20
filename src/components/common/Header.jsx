@@ -42,7 +42,7 @@ function Header() {
             className="cursor-pointer transition-all hover:text-[#212529] min-w-fit"
             smooth={true}
             duration={500}
-            offset={-250}
+            offset={-200}
             spy={true}
           >
             دستاورد ها

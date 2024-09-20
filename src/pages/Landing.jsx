@@ -1,7 +1,5 @@
-import MainLayout from "../Layout/MainLayout";
-
 function Landing() {
-  return <MainLayout />;
+  return <></>;
 }
 
 export default Landing;

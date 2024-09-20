@@ -1,3 +1,6 @@
+import { Outlet } from "react-router-dom";
+
+// components:
 import BottomFooter from "../components/common/Footer/BottomFooter";
 import FooterSvg from "../components/common/Footer/FooterSvg";
 import TopFooter from "../components/common/Footer/TopFooter";
@@ -8,7 +11,9 @@ function MainLayout() {
     <>
       <Header />
 
-      {/* <main className="h-[400px]"></main> */}
+      <main className="">
+        <Outlet />
+      </main>
 
       <footer className="flex flex-col">
         <FooterSvg />

@@ -1,8 +1,13 @@
+import VideoIframe from "./VideoIframe";
+
 function VideoSection() {
   return (
     <div className="flex flex-col items-center relative my-12">
       <section className="container flex flex-row-reverse max-md:flex-col max-md:items-center gap-6 md:my-24 px-8 py-6 md:w-[1200px] rounded-2xl bg-white z-10">
-        <div className="container md:w-1/2 flex md:justify-end bg-black rounded-2xl max-md:h-[280px]"></div>
+        <div className="container md:w-1/2 flex md:justify-end bg-black relative rounded-2xl max-md:h-[280px] overflow-hidden">
+          <VideoIframe videoHash="uaix704" />
+        </div>
+
         <div className="md:w-1/2 max-md:text-center flex flex-col max-md:items-center ~py-[10px]/[36px] px-2">
           <h1 className="font-['rokhSemiBold'] ~text-[24px]/[40px] text-[#495057] w-4/5 mb-4">
             <span className="font-['rokhBold']">ویدیو مربوطه ،</span> جهت تست

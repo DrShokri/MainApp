@@ -1,5 +1,5 @@
 import HeroSection from "../components/landing/HeroSection";
-import VideoSection from "../components/landing/VideoSection.jsx";
+import VideoSection from "../components/landing/VideoSection";
 
 function Landing() {
   return (

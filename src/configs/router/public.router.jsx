@@ -8,10 +8,7 @@ export const PublicRouter = createBrowserRouter([
     path: "/",
     element: <Landing />,
   },
-  {
-    path: "/home",
-    element: <Landing />,
-  },
+
   /* {
     path: "/video",
     element: <VideoList />,

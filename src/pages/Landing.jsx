@@ -1,7 +1,9 @@
+import HeroSection from "../components/landing/HeroSection";
+
 function Landing() {
   return (
     <>
-      <header className="header">Hello</header>
+      <HeroSection />
     </>
   );
 }

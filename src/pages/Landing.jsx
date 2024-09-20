@@ -12,6 +12,7 @@ import { animationVariantsfromBott } from "../core/utils/constants/animationvari
 import Achievements from "../components/Landing/achievements";
 import HeroSection from "../components/landing/HeroSection";
 import VideoSection from "../components/landing/VideoSection";
+import { Element } from "react-scroll";
 
 const Section = ({ children, animationVariant }) => {
   const controls = useAnimation();
@@ -41,15 +42,23 @@ const Section = ({ children, animationVariant }) => {
 const Landing = () => {
   return (
     <div>
-      <Section animationVariant={animationVariantsfromBott}>
-        <HeroSection />
-      </Section>
-      <Section animationVariant={animationVariantsfromRight}>
-        <VideoSection />
-      </Section>
-      <Section animationVariant={animationVariantsfromLeft}>
-        <Achievements />
-      </Section>
+      <Element name="HeroSection">
+        <Section animationVariant={animationVariantsfromBott}>
+          <HeroSection />
+        </Section>
+      </Element>
+
+      <Element name="VideoSection">
+        <Section animationVariant={animationVariantsfromRight}>
+          <VideoSection />
+        </Section>
+      </Element>
+
+      <Element name="AchievementsSection">
+        <Section animationVariant={animationVariantsfromLeft}>
+          <Achievements />
+        </Section>
+      </Element>
     </div>
   );
 };

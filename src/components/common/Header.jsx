@@ -1,23 +1,54 @@
 import { Button } from "@nextui-org/button";
 import { Tooltip } from "@nextui-org/tooltip";
+import { Link } from "react-scroll";
 
 function Header() {
   return (
     <header
-      className=" font-[IranSans] h-[150px] flex
-      items-center justify-between max-w-[1200px]
-      m-auto ~px-[12px]/[24px] min-w-[300px]"
+      className="font-[IranSans] h-[120px] flex items-center justify-between 
+        max-w-[1200px] w-full px-[12px] min-w-[300px] m-auto "
     >
       <ul className="flex text-[#8A85A4] leading-[50px] ~min-[300px]:~text-[10px]/[19px] ~gap-[18px]/[28px]">
-        <li className="cursor-pointer transition-all hover:text-[#212529] min-w-fit">
-          صفحه اصلی
+        <li>
+          <Link
+            to="HeroSection"
+            activeClass="text-[#212529] "
+            className="cursor-pointer transition-all hover:text-[#212529] min-w-fit"
+            smooth={true}
+            duration={500}
+            offset={-200}
+            spy={true}
+          >
+            صفحه اصلی
+          </Link>
         </li>
-        <li className="cursor-pointer transition-all hover:text-[#212529] min-w-fit">
-          ویدیوی معرفی
+        <li>
+          <Link
+            to="VideoSection"
+            activeClass="text-[#212529]"
+            className="cursor-pointer transition-all hover:text-[#212529] min-w-fit"
+            smooth={true}
+            duration={500}
+            offset={-200}
+            spy={true}
+          >
+            ویدیوی معرفی
+          </Link>
         </li>
-        <li className="cursor-pointer transition-all hover:text-[#212529] min-w-fit">
-          دستاورد ها
+        <li>
+          <Link
+            to="AchievementsSection"
+            activeClass="text-[#212529]"
+            className="cursor-pointer transition-all hover:text-[#212529] min-w-fit"
+            smooth={true}
+            duration={500}
+            offset={-250}
+            spy={true}
+          >
+            دستاورد ها
+          </Link>
         </li>
+
         <Button className="bg-[#3a5f7e] ~p-[10px]/[25px] ~mt-[8px]/[0px] max-sm:hidden text-white rounded-[15px]">
           درخواست مشاوره
         </Button>

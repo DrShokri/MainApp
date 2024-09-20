@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Outlet } from "react-router-dom";
 import React from "react";
 
@@ -16,7 +17,7 @@ import { animationVariantsfromBott } from "../core/utils/constants/animationvari
 function MainLayout() {
   const Section = ({ children, animationVariant }) => {
     const controls = useAnimation();
-    const [ref, inView] = useInView({ threshold: 0.2 });
+    const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
 
     React.useEffect(() => {
       if (inView) {
@@ -41,9 +42,14 @@ function MainLayout() {
 
   return (
     <>
-      <Section animationVariant={animationVariantsfromLeft}>
-        <Header />
-      </Section>
+      <div
+        className="w-full bg-[#f8f9fa] fixed 
+        top-0 shadow-md z-50"
+      >
+        <Section animationVariant={animationVariantsfromLeft}>
+          <Header />
+        </Section>
+      </div>
 
       <main className="">
         <Outlet />

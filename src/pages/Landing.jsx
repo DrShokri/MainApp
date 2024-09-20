@@ -16,7 +16,7 @@ import { Element } from "react-scroll";
 
 const Section = ({ children, animationVariant }) => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.4 });
+  const [ref, inView] = useInView({ threshold: 0.4, triggerOnce: true });
 
   React.useEffect(() => {
     if (inView) {

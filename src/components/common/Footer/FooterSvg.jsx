@@ -2,7 +2,7 @@ function FooterSvg() {
   return (
     <div className="h-[136px] w-full">
       <svg
-        className="h-full w-full"
+        className="h-auto w-[100vw]"
         viewBox="0 0 1440 136"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

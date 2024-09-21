@@ -1,10 +1,12 @@
+import { Button } from "@nextui-org/button";
+
 export default function HeroSection() {
   return (
-    <section className="text-black flex flex-col sm:flex-row-reverse ~mt-[100px]/[200px] max-w-[1200px] px-4 m-auto  gap-6">
+    <section className="text-black flex flex-col sm:flex-row-reverse ~mt-[100px]/[200px] max-w-[1200px] px-6 m-auto  gap-6">
       <div className="container sm:w-1/2 flex justify-center md:justify-end">
         <img
           src="picture/heroSection/ImgAmir.JPG"
-          className="~h-[300px]/[300px] ~w-[300px]/[500px] rounded-[10px]"
+          className="rounded-[10px]"
           alt=""
         />
       </div>
@@ -19,9 +21,23 @@ export default function HeroSection() {
           یادگیری این زبان‌ها را با ابزارهـــــای کاربــــــــــردی و هم‌چنین
           پشتیبانـــــی قوی، برای زبان‌آمــــوزان راحـــت‌تر کند.
         </p>
-        <div>
-          <button></button>
-          <button></button>
+        <div className="flex gap-5 mt-16 max-md:flex-col">
+          <Button className="bg-[#3a5f7e] text-white w-[250px] h-[75px] text-[22px] rounded-[20px]">
+            <a
+              href="https://www.instagram.com/drshokri_biology?igsh=MWowZTd0dXM0MDlzbw=="
+              target="_blank"
+            >
+              شروع یادگیری
+            </a>
+          </Button>
+          <Button className="bg-[#cfdde9] text-[#3a5f7e] w-[250px] h-[75px] text-[22px] rounded-[20px]">
+            <a
+              href="https://www.instagram.com/drshokri_biology?igsh=MWowZTd0dXM0MDlzbw=="
+              target="_blank"
+            >
+              درخواست مشاوره
+            </a>
+          </Button>
         </div>
       </div>
     </section>

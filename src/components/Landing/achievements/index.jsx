@@ -22,7 +22,7 @@ export default function Index() {
   };
 
   return (
-    <section className="h-fit w-fit m-auto text-[34px] mt-[110px] px-9 max-sm:px-0">
+    <section className="h-fit w-fit m-auto text-[34px] mt-[110px] px-9 max-sm:px-0 mb-14">
       <h1 className="mb-[80px] w-fit m-auto font-['rokhSemiBold']">
         <span className="border-b-4 border-blue-500">برخی</span> از{" "}
         <span className="font-['rokhBold'] text-blue-500">قبولی</span> هامون

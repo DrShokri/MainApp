@@ -10,8 +10,8 @@ import { animationVariantsfromBott } from "../core/utils/constants/animationvari
 
 // components
 import Achievements from "../components/Landing/achievements";
-import HeroSection from "../components/landing/HeroSection";
-import VideoSection from "../components/landing/VideoSection";
+import HeroSection from "../components/Landing/HeroSection";
+import VideoSection from "../components/Landing/VideoSection";
 import { Element } from "react-scroll";
 
 const Section = ({ children, animationVariant }) => {

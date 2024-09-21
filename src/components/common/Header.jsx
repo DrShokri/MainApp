@@ -11,7 +11,7 @@ function Header() {
       className="font-[IranSans] ~h-[70px]/[120px] flex items-center justify-between 
         max-w-[1200px] w-full px-[12px] min-w-[300px] m-auto"
     >
-      <ul className="flex text-[#8A85A4] leading-[50px] ~min-[300px]:~text-[10px]/[19px] ~gap-[18px]/[28px]">
+      <ul className="flex text-[#8A85A4] leading-[50px] ~min-[300px]:~text-[10px]/[19px] ~gap-[2px]/[28px]">
         <HamburgerMenu />
         <DefaultMenu />
 

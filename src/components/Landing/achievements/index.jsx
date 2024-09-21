@@ -38,7 +38,6 @@ export default function Index() {
                   className="list-disc text-[20px] mr-4 mt-3 flex flex-col gap-3"
                 >
                   <li className="flex flex-row  ">
-                    <li></li>
                     <div className="flex flex-row gap-10">
                       <h2>{items.name}</h2>{" "}
                       <h5>
@@ -57,7 +56,6 @@ export default function Index() {
                   className="list-disc text-[20px] mr-4 mt-3 flex flex-col gap-3"
                 >
                   <li className="flex flex-row  ">
-                    <li></li>
                     <div className="flex flex-row gap-10">
                       <h2>{items.name}</h2>{" "}
                       <h5>

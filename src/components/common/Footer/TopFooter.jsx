@@ -24,9 +24,9 @@ function TopFooter() {
           <li className="hover:scale-105 cursor-pointer">پنل کاربری</li>
         </ul>
       </div>
-      <div className="~w-[300px]/[600px] text-xl flex flex-col">
-        <div className="flex justify-between gap-2 pl-16">
-          <h3 className="font-['rokhMedum'] ~text-[18px]/[24px]">
+      <div className="~w-[280px]/[600px] text-xl flex flex-col">
+        <div className="flex justify-between gap-2 md:pl-16 pl-6">
+          <h3 className="font-['rokhMedum'] ~text-[18px]/[24px] tracking-wide">
             به
             <span className="text-[#1971c2] font-['rokhSemiBold']">
               پشتیبانی
@@ -44,7 +44,7 @@ function TopFooter() {
           لورم ایپسوم متن ساختگی با تولید سادگی است
         </p>
         <div className="border border-[#dee2e6] my-4"></div>
-        <div className="flex flex-wrap justify-between items-center gap-2 text-md text-[#343a40]">
+        <div className="flex flex-wrap justify-center md:justify-between items-center gap-2 text-md text-[#343a40]">
           <div className="flex justify-center-center gap-4">
             <GrLocation color="#868e96" />
             <span className="text-[#495057] text-sm font-['rokhSemiBold']">
@@ -56,7 +56,7 @@ function TopFooter() {
             <HiOutlineMail color="#868e96" />
           </div>
         </div>
-        <div className="mt-4 flex gap-4 overflow-hidden">
+        <div className="mt-4 flex gap-4 overflow-hidden max-sm:justify-center">
           <button className="bg-white px-2 py-1 rounded-md text-[#495057] font-['rokhMedum'] hover:scale-105 ">
             تیکت 1
           </button>

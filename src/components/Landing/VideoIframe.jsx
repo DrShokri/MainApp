@@ -10,7 +10,7 @@ function VideoIframe({ videoHash }) {
         allowFullScreen
         webkitallowfullscreen="false"
         mozallowfullscreen="false"
-        className="w-[100%] h-[100%] absolute right-0"
+        className="w-full h-full absolute top-0 left-0"
       ></iframe>
     </div>
   );

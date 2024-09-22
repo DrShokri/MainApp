@@ -57,7 +57,7 @@ function MainLayout() {
 
       <footer className="flex flex-col">
         <Section animationVariant={animationVariantsfromBott}>
-          <FooterSvg />
+          {/* <FooterSvg /> */}
           <TopFooter />
         </Section>
 
